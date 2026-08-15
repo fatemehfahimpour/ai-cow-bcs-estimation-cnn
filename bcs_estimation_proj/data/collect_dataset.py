@@ -6,8 +6,9 @@ from bs4 import BeautifulSoup
 
 base_url = "https://iplab.dmi.unict.it/legacy/BCS/"
 url = base_url + "dataset.html"
+MAIN_PATH = '../BCS_dataset'
 
-save_dir = "BCS_dataset/images"
+save_dir = "../BCS_dataset/images"
 os.makedirs(save_dir, exist_ok=True)
 
 headers = {"User-Agent": "Mozilla/5.0"}
@@ -62,7 +63,7 @@ for idx , table in enumerate(tables):
 
 
 df = pd.DataFrame(dataset_labels)
-df.to_csv("BCS_dataset/labels.csv", index=False)
+df.to_csv(f"{MAIN_PATH}/labels.csv", index=False)
 
 
 

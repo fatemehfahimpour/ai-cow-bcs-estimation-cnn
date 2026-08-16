@@ -15,11 +15,6 @@ def find_parameters():
     adam_learning_rates = [3e-5, 1e-4, 3e-4, 1e-3]
     momentum_learning_rates = [0.001, 0.01, 0.03]
 
-    # trainable_layers = ['layer4_fc']
-    # optimizer_names = ['adam']
-    # adam_learning_rates = [1e-3]
-    # momentum_learning_rates = [0.001, 0.01, 0.03]
-
     best_model = None
     best_loss = np.inf
     best_history = None
